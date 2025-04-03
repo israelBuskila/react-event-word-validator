@@ -1,5 +1,4 @@
 import '../../styles/SquareInput.css';
-import { useEffect } from 'react';
 
 interface SquareInputProps {
     letter: string;
@@ -7,11 +6,6 @@ interface SquareInputProps {
 }
 
 const SquareInput: React.FC<SquareInputProps> = ({ letter, state }) => {
-    console.log('SquareInput received:', { letter, state });
-    
-    useEffect(() => {
-        console.log('State changed to:', state);
-    }, [state]);
 
     return (
         <div 
