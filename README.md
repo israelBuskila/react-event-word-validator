@@ -7,17 +7,23 @@ A React-TypeScript application implementing a custom event system and word valid
 
 ## Overview
 
-### Part 1: Event System
+### Part 1: Event System Implementation
 - Custom event management system
-- Multiple listener support
+- Multiple listener support per event
 - Event registration and cleanup
-- Error handling
+- Error handling for unregistered events
+- TypeScript implementation
 
 ### Part 2: Word Validation UI
-- Interactive character input
-- Real-time dictionary validation
-- Visual feedback system
-- Virtual keyboard interface
+- Interactive character input system
+  - Left-to-right character placement
+  - Maximum word length enforcement
+  - Backspace functionality
+  - Enter key validation
+- Dictionary integration
+  - Real-time word validation
+  - Visual feedback (green/red borders)
+  - Error handling
 
 ## Features
 
@@ -27,7 +33,6 @@ A React-TypeScript application implementing a custom event system and word valid
 - Backspace functionality
 - Enter key validation
 - Responsive design
-
 
 ## Quick Start
 
