@@ -5,6 +5,21 @@ A React-TypeScript application implementing a custom event system and word valid
 ## Live Demo
 🌐 [Try the application live](https://word-game-phi-fawn.vercel.app/)
 
+## Screenshots
+
+### Start Screen
+![Start Screen](./screenshots/screenStart.png)
+- Select word length (default: 5 letters)
+- Clean, minimalist design
+- Dark theme interface
+
+### Validator Screen
+![Validator Screen](./screenshots/wordValidatorScreen.png)
+- Virtual QWERTY keyboard
+- Word display squares
+- Reset and Help buttons
+- Visual feedback system
+
 ## Overview
 
 ### Part 1: Event System Implementation
