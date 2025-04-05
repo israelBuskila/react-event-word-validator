@@ -3,7 +3,6 @@ import ValidatorBoard from "../ValidatorBoard";
 import { WordApi } from "../../api/word.api";
 import { SquareState } from "../../../types";
 import { UseValidatorEvents } from "../../hooks/UseValidatorEvents";
-import '../../../styles/WordValidatorScreen.css';
 import Keyboard from "../Keyboard";
 
 interface WordValidatorProps {
@@ -67,8 +66,7 @@ const WordValidatorScreen: React.FC<WordValidatorProps> = ({wordLength, handleRe
     };
 
     return (
-        <div className="validator-screen">
-            {/* Help button */}
+        <div className="word-validator-screen">
             <button 
                 className="help-button" 
                 onClick={() => setShowInstructions(true)}
@@ -77,7 +75,6 @@ const WordValidatorScreen: React.FC<WordValidatorProps> = ({wordLength, handleRe
                 ?
             </button>
 
-            {/* Instructions Modal */}
             {showInstructions && (
                 <div className="modal-overlay" onClick={() => setShowInstructions(false)}>
                     <div className="modal-content" onClick={e => e.stopPropagation()}>

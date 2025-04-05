@@ -20,8 +20,6 @@ const DropDown: React.FC<DropDownProps> = ({wordLength, handleWordLengthChange})
               <option value={6}>6 Letters</option>
               <option value={7}>7 Letters</option>
               <option value={8}>8 Letters</option>
-              <option value={9}>9 Letters</option>
-              <option value={10}>10 Letters</option>
             </select>
           </div>
     )

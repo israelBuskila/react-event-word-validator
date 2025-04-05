@@ -1,4 +1,5 @@
 import DropDown from "../DropDown";
+import '../../../styles/StartScreen.css';
 
 interface StartScreenProps {
     wordLength: number;

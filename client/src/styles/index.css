@@ -129,8 +129,8 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Game Layout */
-.game-container {
+
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,7 +138,6 @@ button:focus {
   padding: var(--spacing-xl) var(--spacing-md);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   :root {
     --font-size-base: 14px;
@@ -152,7 +151,6 @@ button:focus {
   }
 }
 
-/* Animation Keyframes */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -163,7 +161,6 @@ button:focus {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Utility Classes */
 .text-center { text-align: center; }
 .mt-1 { margin-top: var(--spacing-sm); }
 .mt-2 { margin-top: var(--spacing-md); }
@@ -172,12 +169,10 @@ button:focus {
 .mb-2 { margin-bottom: var(--spacing-md); }
 .mb-3 { margin-bottom: var(--spacing-lg); }
 
-/* Status Colors */
 .color-success { color: var(--color-success); }
 .color-error { color: var(--color-error); }
 .color-warning { color: var(--color-warning); }
 .color-info { color: var(--color-info); }
 
-/* Animations */
 .fade-in { animation: fadeIn var(--transition-base); }
 .slide-up { animation: slideUp var(--transition-base); }
