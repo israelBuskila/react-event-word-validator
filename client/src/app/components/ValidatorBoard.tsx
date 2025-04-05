@@ -1,16 +1,16 @@
-import '../../styles/GameBoard.css';
+import '../../styles/ValidatorBoard.css';
 import SquareInput from "./SquareInput";
 
-interface GameBoardProps {
+interface ValidatorBoardProps {
     word: string[];
     wordLength: number;
     squareStates: ('empty' | 'filled' | 'success' | 'error')[];
 }
 
-const GameBoard: React.FC<GameBoardProps> = ({word, wordLength, squareStates}) => {
+const ValidatorBoard: React.FC<ValidatorBoardProps> = ({word, wordLength, squareStates}) => {
     return (
-        <div className="game-board">
-            <div className="game-board-row">
+        <div className="validator-board">
+            <div className="validator-row">
                 {Array(wordLength).fill(null).map((_, index) => (
                     <SquareInput 
                         key={index}
@@ -23,4 +23,4 @@ const GameBoard: React.FC<GameBoardProps> = ({word, wordLength, squareStates}) =
     );
 };
 
-export default GameBoard;
+export default ValidatorBoard;

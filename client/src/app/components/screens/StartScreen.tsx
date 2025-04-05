@@ -1,17 +1,17 @@
-import DropDown from "./DropDown";
+import DropDown from "../DropDown";
 
 interface StartScreenProps {
     wordLength: number;
     handleWordLengthChange: (length: number) => void;
-    handleStartGame: () => void;
+    handleStart: () => void;
 }
 
-const StartScreen: React.FC<StartScreenProps> = ({wordLength, handleWordLengthChange, handleStartGame}) => {
+const StartScreen: React.FC<StartScreenProps> = ({wordLength, handleWordLengthChange, handleStart}) => {
     return (
         <div className="start-screen">
           <DropDown wordLength={wordLength} handleWordLengthChange={handleWordLengthChange}/>
-          <button className="start-button" onClick={handleStartGame}>
-            Start Game
+          <button className="start-button" onClick={handleStart}>
+            Start
           </button>
         </div>
     )

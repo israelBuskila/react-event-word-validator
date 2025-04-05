@@ -1,36 +1,66 @@
 import { useState } from "react";
 import '../styles/App.css';
-import StartScreen from "./components/StartScreen";
-import GameScreen from "./components/GameScreen";
+import StartScreen from "./components/screens/StartScreen";
+import WordValidator from "./components/screens/WordValidatorScreen";
+
+interface ValidatorState {
+  isValidatorActive: boolean;
+  wordLength: number;
+}
 
 function App() {
-  const [isGameStarted, setIsGameStarted] = useState(false);
-  const [wordLength, setWordLength] = useState<number>(5);
+  const [validatorState, setValidatorState] = useState<ValidatorState>({
+    isValidatorActive: false,
+    wordLength: 5
+  });
 
-
-
-  const handleStartScreen = () => {
-    setIsGameStarted(true);
+  const handleStartValidation = () => {
+    setValidatorState(prevState => ({
+      ...prevState,
+      isValidatorActive: true
+    }));
   };
 
-  const handleGameScreen = () => {
-    setIsGameStarted(false);
+  const handleResetValidation = () => {
+    setValidatorState(prevState => ({
+      ...prevState,
+      isValidatorActive: false
+    }));
   };
 
   const handleWordLengthChange = (length: number) => {
-    setWordLength(length);
+    setValidatorState(prevState => ({
+      ...prevState,
+      wordLength: length
+    }));
   };
 
   return (
-    <div className="app-container">
-      <h1 className="game-title">Word Game</h1>
-      {!isGameStarted ? (
-        <StartScreen wordLength={wordLength} handleWordLengthChange={handleWordLengthChange} handleStartGame={handleStartScreen}/>
-      ) : (
-        <GameScreen  wordLength={wordLength} handleNewGame={handleGameScreen} />
-      )}
+    <div className="app-container" role="application">
+      <header className="app-header">
+        <h1 className="app-title">Word Validator</h1>
+      </header>
+
+      <main className="app-content">
+        {!validatorState.isValidatorActive ? (
+          <StartScreen 
+            wordLength={validatorState.wordLength}
+            handleWordLengthChange={handleWordLengthChange}
+            handleStart={handleStartValidation}
+          />
+        ) : (
+          <WordValidator 
+            wordLength={validatorState.wordLength}
+            handleReset={handleResetValidation}
+          />
+        )}
+      </main>
+
+      <footer className="app-footer">
+        <p className="app-version">Event-Driven Word Validation System v1.0</p>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
