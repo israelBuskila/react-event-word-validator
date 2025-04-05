@@ -28,13 +28,6 @@ A React-TypeScript application implementing a custom event system and word valid
 - Enter key validation
 - Responsive design
 
-## Technical Stack
-
-- React 18
-- TypeScript
-- Custom Event System
-- Dictionary API Integration
-- Vercel Deployment
 
 ## Quick Start
 
