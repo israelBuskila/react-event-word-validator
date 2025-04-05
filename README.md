@@ -34,17 +34,6 @@ A React-TypeScript application implementing a custom event system and word valid
 - Enter key validation
 - Responsive design
 
-## Styling
-
-### CSS Structure
-```
-styles/
-├── App.css              # Global styles and layout
-├── Validator.css        # Word validator container styles
-├── ValidatorBoard.css   # Game board grid styles
-├── ValidatorSquare.css  # Individual square styles
-└── ValidatorKeyboard.css # Virtual keyboard styles
-```
 
 ### Key Style Features
 - Responsive grid layout
@@ -55,16 +44,6 @@ styles/
 - Consistent spacing
 - Clear visual feedback
 
-### Color Palette
-```css
-:root {
-  --primary-color: #4a90e2;
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --background-color: #f5f6fa;
-  --text-color: #2c3e50;
-}
-```
 
 ## Quick Start
 
@@ -93,7 +72,6 @@ npm test -- --coverage
 - Custom Event System
 - Dictionary API Integration
 - Vercel Deployment
-- CSS3 with Flexbox/Grid
 
 ## Project Overview
 A React-TypeScript application demonstrating advanced front-end development concepts including:
@@ -104,31 +82,6 @@ A React-TypeScript application demonstrating advanced front-end development conc
 - API Integration
 - State Management
 - User Interface Design
-
-## Technical Highlights
-
-### Event System
-```typescript
-// Custom event management
-const { registerValidatorEvent, emitValidatorEvent } = useValidatorEvents();
-```
-
-### Component Architecture
-```typescript
-// Type-safe component props
-interface WordValidatorProps {
-    wordLength: number;
-    handleReset: () => void;
-}
-```
-
-## Learning Outcomes
-
-- Event-driven architecture implementation
-- React hooks and custom hooks
-- TypeScript integration
-- Component design patterns
-- State management strategies
 
 
 ## Project Overview
@@ -141,45 +94,6 @@ A React-TypeScript application demonstrating advanced front-end development conc
 - State Management
 - User Interface Design
 
-## Technical Implementation
-
-### 1. Event Management System
-The core of this application showcases a custom event management system implementation:
-
-```typescript
-class EventManager {
-    private listeners: { [key: string]: ((data: any) => void)[] };
-
-    // Demonstrates understanding of:
-    // - Event handling
-    // - Observer pattern
-    // - TypeScript class implementation
-    // - Error handling
-}
-```
-
-### 2. React Custom Hooks
-Implementation of custom hooks showing understanding of React's composition model:
-
-```typescript
-export const useValidatorEvents = (debug = false) => {
-    // Demonstrates:
-    // - React hooks best practices
-    // - State management
-    // - Cleanup handling
-    // - TypeScript integration
-}
-```
-
-### 3. Component Architecture
-The application follows a well-structured component hierarchy:
-- `App.tsx` - Main application container
-- `WordValidator.tsx` - Core validation logic
-- `ValidatorBoard.tsx` - Word display grid
-- `ValidatorSquare.tsx` - Individual letter squares
-- `ValidatorKeyboard.tsx` - Input interface
-
-### 4. Key Technical Features
 
 #### Event System Implementation
 - Custom event registration and handling
