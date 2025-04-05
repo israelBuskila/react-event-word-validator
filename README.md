@@ -52,17 +52,7 @@ A React-TypeScript application implementing a custom event system and word valid
 npm install
 
 # Start development server
-npm start
-```
-
-## Testing
-
-```bash
-# Run tests
-npm test
-
-# Run tests with coverage
-npm test -- --coverage
+npm run dev
 ```
 
 ## Technical Stack
@@ -190,7 +180,6 @@ npm start
 - CSS
 - REST API for word validation
 
-## Getting Started
 
 ### Prerequisites
 
@@ -219,18 +208,6 @@ npm start
 yarn start
 ```
 
-The application will be available at `http://localhost:3000`
 
-## How to Play
 
-1. Type letters using the on-screen keyboard or your physical keyboard
-2. Letters fill the squares from left to right
-3. When all squares are filled:
-   - Press ENTER to validate the word
-   - If the word exists in the English dictionary, squares turn green
-   - If the word doesn't exist, squares turn red
-4. Use the backspace button (⌫) to delete letters
-5. Click the "New Game" button to start over
-6. Click the "?" button for game instructions
 
-## Project Structure
