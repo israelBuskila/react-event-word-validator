@@ -1,4 +1,135 @@
-# Word Validation Application
+# Word Validation Assignment
+
+A React-TypeScript application implementing a custom event system and word validation UI.
+
+## Live Demo
+🌐 [Try the application live](https://word-game-phi-fawn.vercel.app/)
+
+## Assignment Requirements
+
+### Part 1: Event System Implementation
+- Custom `MyActionListener` class with:
+  - Event registration
+  - Listener management
+  - Event emission
+  - Error handling
+- Support for multiple listeners per event
+- Proper cleanup and removal of events
+
+### Part 2: Word Validation UI
+- Interactive character input system
+- Visual feedback for word validation
+- Dictionary integration
+- Keyboard interface with:
+  - Character input
+  - Backspace functionality
+  - Enter key validation
+
+## Features
+
+- Real-time character input
+- Visual feedback for valid/invalid words
+- Dictionary word validation
+- Backspace functionality
+- Enter key validation
+- Responsive design
+
+## Styling
+
+### CSS Structure
+```
+styles/
+├── App.css              # Global styles and layout
+├── Validator.css        # Word validator container styles
+├── ValidatorBoard.css   # Game board grid styles
+├── ValidatorSquare.css  # Individual square styles
+└── ValidatorKeyboard.css # Virtual keyboard styles
+```
+
+### Key Style Features
+- Responsive grid layout
+- Modern color scheme
+- Smooth transitions
+- Interactive hover states
+- Mobile-friendly design
+- Consistent spacing
+- Clear visual feedback
+
+### Color Palette
+```css
+:root {
+  --primary-color: #4a90e2;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --background-color: #f5f6fa;
+  --text-color: #2c3e50;
+}
+```
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+## Testing
+
+```bash
+# Run tests
+npm test
+
+# Run tests with coverage
+npm test -- --coverage
+```
+
+## Technical Stack
+
+- React 18
+- TypeScript
+- Custom Event System
+- Dictionary API Integration
+- Vercel Deployment
+- CSS3 with Flexbox/Grid
+
+## Project Overview
+A React-TypeScript application demonstrating advanced front-end development concepts including:
+- Custom Event Management System
+- React Hooks and Custom Hooks
+- Component Architecture
+- TypeScript Implementation
+- API Integration
+- State Management
+- User Interface Design
+
+## Technical Highlights
+
+### Event System
+```typescript
+// Custom event management
+const { registerValidatorEvent, emitValidatorEvent } = useValidatorEvents();
+```
+
+### Component Architecture
+```typescript
+// Type-safe component props
+interface WordValidatorProps {
+    wordLength: number;
+    handleReset: () => void;
+}
+```
+
+## Learning Outcomes
+
+- Event-driven architecture implementation
+- React hooks and custom hooks
+- TypeScript integration
+- Component design patterns
+- State management strategies
+
 
 ## Project Overview
 A React-TypeScript application demonstrating advanced front-end development concepts including:
@@ -16,7 +147,7 @@ A React-TypeScript application demonstrating advanced front-end development conc
 The core of this application showcases a custom event management system implementation:
 
 ```typescript
-class MyActionListener {
+class EventManager {
     private listeners: { [key: string]: ((data: any) => void)[] };
 
     // Demonstrates understanding of:
@@ -31,7 +162,7 @@ class MyActionListener {
 Implementation of custom hooks showing understanding of React's composition model:
 
 ```typescript
-export const useActionListener = (debug = false) => {
+export const useValidatorEvents = (debug = false) => {
     // Demonstrates:
     // - React hooks best practices
     // - State management
@@ -42,6 +173,11 @@ export const useActionListener = (debug = false) => {
 
 ### 3. Component Architecture
 The application follows a well-structured component hierarchy:
+- `App.tsx` - Main application container
+- `WordValidator.tsx` - Core validation logic
+- `ValidatorBoard.tsx` - Word display grid
+- `ValidatorSquare.tsx` - Individual letter squares
+- `ValidatorKeyboard.tsx` - Input interface
 
 ### 4. Key Technical Features
 
@@ -76,33 +212,6 @@ cd word-validation-app
 npm install
 npm start
 ```
-
-## Code Examples
-
-### Event System Usage
-```typescript
-// Example of the event system implementation
-actionListener.registerListener("ACTION_NAME", (data) => {
-    // Handler implementation
-});
-```
-
-### Component Implementation
-```typescript
-const GameScreen: React.FC<GameScreenProps> = ({wordLength}) => {
-    // Demonstrates:
-    // - TypeScript with React
-    // - Props handling
-    // - State management
-    // - Event system integration
-};
-```
-
-## Testing
-The application includes:
-- Unit tests for event system
-- Component testing
-- Integration tests
 
 ## Technical Challenges Solved
 1. Event Management
