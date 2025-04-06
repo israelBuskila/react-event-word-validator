@@ -3,7 +3,7 @@
 A React-TypeScript application implementing a custom event system and word validation UI.
 
 ## Live Demo
-🌐 [Try the application live](https://word-game-phi-fawn.vercel.app/)
+🌐 [Try the application live](https://word-wizard-hi-fawn.vercel.app/)
 
 ## Screenshots
 
